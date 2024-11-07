@@ -1,0 +1,28 @@
+---
+import DashboardLayout from '../layouts/DashboardLayout.astro';
+import { TeamSection } from '@/components/dashboard/TeamSection';
+import { TaskSection } from '@/components/dashboard/TaskSection';
+import { ProjectSection } from '@/components/dashboard/ProjectSection';
+import { ActionBox } from '@/components/dashboard/ActionBox';
+
+const username = "Sarah";
+---
+
+<DashboardLayout title="Dashboard Overview">
+  <div class="container px-8 py-6">
+    <h1 class="text-3xl font-bold mb-8">
+      Welcome back, {username}! 👋
+    </h1>
+    
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div class="lg:col-span-2 space-y-6">
+        <TeamSection client:load />
+        <TaskSection client:load />
+        <ProjectSection client:load />
+      </div>
+      <div>
+        <ActionBox client:load />
+      </div>
+    </div>
+  </div>
+</DashboardLayout>

@@ -1,0 +1,34 @@
+---
+import DashboardLayout from '../layouts/DashboardLayout.astro';
+import { ColorPalette } from '@/components/brand/ColorPalette';
+import { Typography } from '@/components/brand/Typography';
+import { LogoGuidelines } from '@/components/brand/LogoGuidelines';
+import { VoiceTone } from '@/components/brand/VoiceTone';
+import { BrandGoals } from '@/components/brand/BrandGoals';
+
+---
+
+<DashboardLayout title="Brand Guide">
+  <div class="container px-8 py-6">
+    <div class="flex flex-col gap-2 mb-8">
+      <h1 class="text-3xl font-bold">Brand Guide</h1>
+      <p class="text-muted-foreground">
+        Comprehensive guidelines for maintaining brand consistency across all platforms.
+      </p>
+    </div>
+
+    <div class="grid gap-8">
+      <BrandGoals client:load />
+      
+      <div class="grid gap-6 md:grid-cols-2">
+        <ColorPalette client:load />
+        <Typography client:load />
+      </div>
+      
+      <div class="grid gap-6 md:grid-cols-2">
+        <LogoGuidelines client:load />
+        <VoiceTone client:load />
+      </div>
+    </div>
+  </div>
+</DashboardLayout>
