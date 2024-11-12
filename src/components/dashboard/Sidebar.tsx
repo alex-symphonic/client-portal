@@ -1,5 +1,5 @@
 import React from 'react';
-import { LayoutDashboard, CheckSquare, Palette, FolderOpen, Briefcase, Menu } from 'lucide-react';
+import { LayoutDashboard, CheckSquare, Palette, FolderOpen, Briefcase, Menu, ChartSpline } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
@@ -9,6 +9,7 @@ const navigation = [
   { name: 'Brand Guide', href: '/brand', icon: Palette },
   { name: 'Files/Assets', href: '/files', icon: FolderOpen },
   { name: 'Projects', href: '/projects', icon: Briefcase },
+  { name: 'Reports', href: '/reports', icon: ChartSpline },
 ];
 
 export function Sidebar() {
